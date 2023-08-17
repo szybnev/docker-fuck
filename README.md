@@ -30,7 +30,7 @@ docker attach kaliwork
 
 # ToDo
 - [x] Kali Prog version 1.0. Absolutely work version.
-- [] Add more easier container startup.
-- [] Add more tools in kaliwork.
-- [] Try to more speedup container startup, specialy for kaliwork. 
-- [] May be try to do images lower disk space usage.
+- [ ] Add more easier container startup.
+- [ ] Add more tools in kaliwork.
+- [ ] Try to more speedup container startup, specialy for kaliwork. 
+- [ ] May be try to do images lower disk space usage.
