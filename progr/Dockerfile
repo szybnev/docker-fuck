@@ -6,30 +6,28 @@ LABEL maintainer="Sergey Zybnev <https://github.com/szybnev>"
 WORKDIR /root
 
 # Let's get those essentials
-RUN apt-get clean &&  apt-get update &&  \
-    apt-get full-upgrade -y &&  apt-get autoremove -y &&  \
-    DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y --no-install-recommends \
+RUN apt-get clean &&  apt-get update && apt-get autoremove -y &&  \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
                         curl \
                         build-essential \
                         python3 \
                         python3-pip \
                         python3-venv \
                         net-tools\
-            			whois \
-            			nano \
-            			netcat-traditional \
-            			wget \
-            			git \
+            		whois \
+            		nano \
+            		netcat-traditional \
+            		wget \
+            		git \
                         traceroute \
                         zip \
                         kali-linux-headless \
                         gcc \
                         musl-dev \
                         unzip \
-            			libpcap-dev \
-            			iputils-ping \
-            			nmap && \
+            		libpcap-dev \
+            		iputils-ping \
+            		nmap && \
     apt-get clean  &&  rm -rf /var/lib/apt/lists/*
 
 # Go, Go, Golang!
@@ -45,7 +43,7 @@ RUN go install github.com/xm1k3/cent@latest &&  \
     go install github.com/projectdiscovery/notify/cmd/notify@latest &&  \
     go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest &&  \
     go install github.com/projectdiscovery/httpx/cmd/httpx@latest && \
-	go install github.com/projectdiscovery/katana/cmd/katana@latest &&  \
+    go install github.com/projectdiscovery/katana/cmd/katana@latest &&  \
     go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest &&  \
     go install github.com/tomnomnom/assetfinder@latest && \
     go install github.com/tomnomnom/fff@latest &&  \
