@@ -12,20 +12,20 @@ docker build -t kaliwork .
 
 ## Stardup container
 ```
-docker run -d -it kaliprog 
+docker run --name kaliprog -d -t -i kaliprog:1.0 /bin/bash
 ```
 or
 ```
-docker run -d -it kaliwork
+docker run --name kaliwork -d -t -i kaliwork:1.0 /bin/bash
 ```
 
 ## Attach to container
 ```
-docker attach kaliprog
+docker exec -it kaliprog bash
 ```
 or
 ```
-docker attach kaliwork
+docker exec -it kaliwork bash
 ```
 
 # ToDo
